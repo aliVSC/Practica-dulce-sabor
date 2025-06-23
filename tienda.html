@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Tienda | Dulce Sabor</title>
   <link rel="stylesheet" href="css/estilos.css" />
+
 </head>
 <body>
   <div class="container">
@@ -16,48 +17,64 @@
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h2>Nuestros Pasteles</h2>
-        <div class="productos">
-          <div class="producto">
-            <img src="img/pastel1.jpg" alt="Pastel Chocolate" />
-            <h3>Pastel de Chocolate</h3>
-            <p>$25.00</p>
-          </div>
-          <div class="producto">
-            <img src="img/pastel2.jpg" alt="Pastel Frutas" />
-            <h3>Tarta frutos del bosque</h3>
-            <p>$28.00</p>
-          </div>
-          <div class="producto">
-            <img src="img/pastel3.jpg" alt="Cheesecake" />
-            <h3>Cheesecake limón</h3>
-            <p>$20.00</p>
-          </div>
-          <div class="producto">
-            <img src="img/pastel4.jpg" alt="Pastel Vainilla" />
-            <h3>Cupcake de cafe</h3>
-            <p>$3.00</p>
-          </div>
-          <div class="producto">
-            <img src="img/pastel5.jpg" alt="Pastel Red Velvet" />
-            <h3>Red Velvet</h3>
-            <p>$21.00</p>
-          </div>
-          <div class="producto">
-            <img src="img/pastel6.png" alt="Pastel Oreo" />
-            <h3>Pastel zanahoria y nueces</h3>
-            <p>$18.00</p>
-          </div>
+    <main class="contenido">
+      <section class="productos">
+        <div class="producto">
+          <img src="img/pastel1.jpg" alt="Pastel Chocolate" />
+          <h3>Pastel de Chocolate</h3>
+          <p>$25.00</p>
+          <button onclick="agregarProducto('Pastel de Chocolate', 25)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="img/pastel2.jpg" alt="Tarta Frutas" />
+          <h3>Tarta frutos del bosque</h3>
+          <p>$28.00</p>
+          <button onclick="agregarProducto('Tarta frutos del bosque', 28)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="img/pastel3.jpg" alt="Cheesecake Limón" />
+          <h3>Cheesecake limón</h3>
+          <p>$20.00</p>
+          <button onclick="agregarProducto('Cheesecake limón', 20)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="img/pastel4.jpg" alt="Cupcake Café" />
+          <h3>Cupcake de café</h3>
+          <p>$3.00</p>
+          <button onclick="agregarProducto('Cupcake de café', 3)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="img/pastel5.jpg" alt="Red Velvet" />
+          <h3>Red Velvet</h3>
+          <p>$21.00</p>
+          <button onclick="agregarProducto('Red Velvet', 21)">Agregar</button>
+        </div>
+        <div class="producto">
+          <img src="img/pastel6.png" alt="Pastel Zanahoria" />
+          <h3>Pastel zanahoria y nueces</h3>
+          <p>$18.00</p>
+          <button onclick="agregarProducto('Pastel zanahoria y nueces', 18)">Agregar</button>
         </div>
       </section>
+
+      <aside class="carrito">
+        <h2>Ventas</h2>
+        <ul id="listaCarrito"></ul>
+        <p>Subtotal: $<span id="subtotal">0.00</span></p>
+        <p>IVA (15%): $<span id="iva">0.00</span></p>
+        <p><strong>Total: $<span id="total">0.00</span></strong></p>
+        <button onclick="pagar()">Pagar</button>
+      </aside>
+
+
     </main>
 
     <footer>
       <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
     </footer>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
 
