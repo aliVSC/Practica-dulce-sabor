@@ -18,8 +18,11 @@
 
       <main>
         <section>
-          <h2>Contáctanos</h2>
+          
           <form id="form-contacto">
+            <h2>Contáctanos</h2>
+            <br>
+            
             <label for="nombre">Nombre:</label><br />
             <input type="text" id="nombre" name="nombre" required /><br /><br />
 
@@ -29,8 +32,8 @@
             <label for="tipo">Tipo de pastel:</label><br />
             <select id="tipo" name="tipo">
               <option value="chocolate">Chocolate</option>
-              <option value="zanahoria y nueces">Vainilla</option>
-              <option value="frutos del bosque">Frutas</option>
+              <option value="vainilla">Vainilla</option>
+              <option value="frutas">Frutas</option>
               <option value="cheesecake">Cheesecake</option></select
             ><br /><br />
 
@@ -43,23 +46,13 @@
             ></textarea
             ><br /><br />
 
-            <label>
-              <input type="checkbox" name="terminos" required />
-              Acepto los términos y condiciones </label
-            ><br /><br />
+            <div class="campo-checkbox">
+              <input type="checkbox" id="terminos" name="terminos" required />
+              <label for="terminos">Acepto los términos y condiciones</label>
+            </div>
 
             <button type="submit">Enviar</button>
           </form>
-
-          <p
-            id="mensaje-confirmacion"
-            style="
-              color: green;
-              font-weight: bold;
-              display: none;
-              margin-top: 20px;
-            "
-          ></p>
         </section>
       </main>
 
@@ -67,18 +60,6 @@
         <p>Visítanos y endulza tu día 🍰 © 2025 Dulce Sabor</p>
       </footer>
     </div>
-
-    <script>
-      const form = document.getElementById("form-contacto");
-      const mensaje = document.getElementById("mensaje-confirmacion");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault(); // Evita que la página se recargue
-        mensaje.textContent = "¡Tus datos han sido guardados exitosamente!";
-        mensaje.style.display = "block";
-        form.reset(); // Limpia el formulario
-      });
-    </script>
 
     <!-- Ventana emergente -->
     <div id="popup-confirmacion" class="popup-confirmacion">
@@ -89,5 +70,7 @@
         <button onclick="cerrarPopup()">OK</button>
       </div>
     </div>
+
+    <script src="js/contacto.js"></script>
   </body>
 </html>

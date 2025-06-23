@@ -1,117 +1,80 @@
-/* estilos.css - Estilos base para Dulce Sabor */
+/*estilos generales*/
 
-/*Aplicando reglas universales*/
-*{
-    margin: 200;
-    padding: 20;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*Estilos generales del sitio*/
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #e7e2df;
-    color: black;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #e7e2df;
+  color: black;
 }
 
-/*Definir el estilo del encabezado*/
-header{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: #f4d3c2;
-    padding: 20px;
-    text-align: center;
+/*container y sections*/
+
+.container {
+  padding: 2px;
+  max-width: 1800px;
+  margin: auto;
 }
+
+section {
+  padding: 30px 20px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/*nav y header*/
+
+header {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background-color: #f4d3c2;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #b5651d;
+}
+
+/*imagenes*/
+
 
 .imagen-portada img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    margin-bottom: 30px;
-  }
-  
-/*Estilo de las img*/
-.producto img {
-    width: 100%; 
-    height: auto; 
-    max-width: 300px; 
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    object-fit: cover; 
- }
-
-
-
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
 
 .producto img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
- section {
-    padding: 30px 20px;
-    margin-bottom: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
-
-
-ul {
-    list-style: none;
-    padding-left: 0;
-    text-align: center;
-}
-
-ul li {
-    padding: 5px 0;
-}
-
-/*Estilo del navegador*/
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px; /* 👈 separación entre enlaces */
-    padding: 10px;
-}
-nav a {
-    color: #000000;
-    text-decoration: underline;
-    font-weight: bold;
-}
-nav a:hover {
-    color: #b5651d;
-}
-
-
-/*Estilo de pie de pagina*/
-footer{
-    background-color: #f4d3c2;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    padding: 20px;
-    margin-top: 20px;
-}
-
-
-@media screen and (max-width: 768px) {
-    nav {
-      flex-direction: column;
-      gap: 10px;
-    }
-  
-    .inicio-contenedor {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-
-/*Carrito de compras*/
+/*carrito*/
 
 .contenido {
   display: flex;
@@ -121,7 +84,6 @@ footer{
   flex-wrap: nowrap;
 }
 
-/* Estilos para los productos */
 .productos {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -134,14 +96,7 @@ footer{
   padding: 15px;
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.producto img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .producto button {
@@ -158,7 +113,6 @@ footer{
   background-color: #db7c1d;
 }
 
-/* Carrito de compras */
 .carrito {
   background-color: #f9f9f9;
   border: 1px solid #ccc;
@@ -190,7 +144,7 @@ footer{
   margin-top: 10px;
   padding: 10px 16px;
   background-color: #f9f9f9;
-  color: rgb(0, 0, 0);
+  color: black;
   border: none;
   border-radius: 5px;
   font-weight: bold;
@@ -201,7 +155,6 @@ footer{
   background-color: #ffffff;
 }
 
-
 .borrar-item {
   color: red;
   cursor: pointer;
@@ -209,15 +162,15 @@ footer{
   font-weight: bold;
 }
 
+/*pago*/
 
-/*Estilos de pago,html*/
 .pago-container {
   max-width: 600px;
   margin: 50px auto;
   padding: 30px;
   background-color: #f4d3c2;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -239,6 +192,26 @@ footer{
   margin: 15px 0;
 }
 
+/*formulario contacto*/
+
+form {
+  background-color: #fff8f5;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/*botnes*/
+
 button {
   background-color: #ff9800;
   color: white;
@@ -253,8 +226,8 @@ button:hover {
   background-color: #e68900;
 }
 
+/*ventana emergente*/
 
-/*Estilos de ventana emergente*/
 .popup-confirmacion {
   position: fixed;
   bottom: 20px;
@@ -282,3 +255,75 @@ button:hover {
   border-radius: 5px;
   cursor: pointer;
 }
+
+/*pie de pagina*/
+
+footer {
+  background-color: #f4d3c2;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/*responsivo*/
+
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .inicio-contenedor {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Limitar ancho del formulario */
+form {
+  background-color: #fff8f5;
+  padding: 30px;
+  border: 1px solid #e0c6ba;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Estilo y alineación del checkbox */
+/* Checkbox bien alineado */
+/* Centrado del formulario */
+form {
+  max-width: 600px;
+  margin: 40px auto;
+  background-color: #fff8f5;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #e0c6ba;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilo para inputs */
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+/* Estilo alineado del checkbox */
+.campo-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+
+
