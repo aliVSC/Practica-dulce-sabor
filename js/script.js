@@ -42,19 +42,16 @@ function actualizarCarrito() {
 
 function pagar() {
   if (subtotal === 0) {
-    alert("El carrito está vacío.");
+    alert("El carrito está vacío. Agrega productos antes de pagar.");
     return;
   }
 
-  const metodo = prompt("Selecciona método de pago:\n1. Efectivo\n2. Transferencia\n3. Tarjeta");
+  // Guarda la info del carrito y total en localStorage
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  localStorage.setItem("subtotal", subtotal.toFixed(2));
+  localStorage.setItem("iva", (subtotal * 0.15).toFixed(2));
+  localStorage.setItem("total", (subtotal * 1.15).toFixed(2));
 
-  if (metodo === "1") {
-    alert("Has seleccionado pago en EFECTIVO. ¡Gracias por tu compra!");
-  } else if (metodo === "2") {
-    alert("Has seleccionado pago por TRANSFERENCIA. Se enviará la información bancaria.");
-  } else if (metodo === "3") {
-    alert("Has seleccionado pago con TARJETA. Procede a ingresar los datos en la pasarela.");
-  } else {
-    alert("Método de pago no válido o cancelado.");
-  }
+  // Redirige a la página visual de pago
+  window.location.href = "pago.html";
 }

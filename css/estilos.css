@@ -220,3 +220,47 @@ footer{
   margin-left: 10px;
   font-weight: bold;
 }
+
+
+/*Estilos de pago,html*/
+.pago-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f4d3c2;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.metodos-pago label {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.metodos-pago input {
+  padding: 8px;
+  width: 150px;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.resultado p {
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+button {
+  background-color: #ff9800;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e68900;
+}

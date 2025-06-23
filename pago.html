@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pago | Dulce Sabor</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <script defer src="js/pago.js"></script>
+  </head>
+  <body>
+    <div class="pago-container">
+      <h1>Total a pagar: $<span id="monto-total">0.00</span></h1>
+
+      <div class="metodos-pago">
+        <label>
+          Efectivo:
+          <input type="number" id="efectivo" oninput="calcularCambio()" />
+        </label>
+        <label>
+          Tarjeta:
+          <input type="number" id="tarjeta" oninput="calcularCambio()" />
+        </label>
+        <label>
+          Transferencia:
+          <input type="number" id="transferencia" oninput="calcularCambio()" />
+        </label>
+      </div>
+
+      <div class="resultado">
+        <p><strong>Cambio:</strong> $<span id="cambio">0.00</span></p>
+        <p><strong>Restante:</strong> $<span id="restante">0.00</span></p>
+      </div>
+
+      <button onclick="finalizarPago()">Guardar</button>
+    </div>
+  </body>
+</html>
